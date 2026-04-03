@@ -9,7 +9,7 @@ def get_news():
     api_key = request.args.get("api_key")
     
     if api_key is None and len(request.args) > 0:
-        return jsonify({"error": "Invalid api key"})
+        return jsonify({"error": "Invalid query parametrs"})
  
     if api_key and api_key != API_KEY:
         return jsonify({"error": "Invalid api key"})
